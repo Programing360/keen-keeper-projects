@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HomePage = () => {
@@ -17,7 +18,8 @@ const HomePage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         {friends.map((friend, idx) => (
-          <div key={idx} className="card bg-base-100 shadow-sm">
+          <Link href={`/friends/${friend.id}`} alt={friend.name} key={idx}>
+            <div className="card bg-base-100 shadow-sm">
             <figure className="px-10 pt-10">
               <Image
                 src={friend.image}
@@ -49,6 +51,7 @@ const HomePage = () => {
               )}
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>
