@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaHome } from "react-icons/fa";
+import { ImStatsDots } from "react-icons/im";
+import { IoTimeOutline } from "react-icons/io5";
 
 const Header = () => {
 
@@ -44,13 +47,13 @@ const Header = () => {
         </div>
         <div className="navbar-end flex gap-4">
           <Link href="/" className={activeClass("/")}>
-            Home
+           <FaHome /> Home
           </Link>
           <Link href="/timeline" className={activeClass("/timeline")}>
-            Timeline
+           <IoTimeOutline /> Timeline
           </Link>
           <Link href="/stats" className={activeClass("/stats")}>
-            Stats
+           <ImStatsDots /> Stats
           </Link>
         </div>
       </div>

@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import callIcon from "../../../../public/assets/call.png";
 import textIcon from "../../../../public/assets/text.png";
 import videoIcon from "../../../../public/assets/video.png";
+import { RiNotificationSnoozeLine } from "react-icons/ri";
+import { FaArchive } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const FriendsPageDetails = () => {
   const { id } = useParams();
@@ -61,24 +64,27 @@ const FriendsPageDetails = () => {
                   >
                     {friendDetails.status}
                   </p>
+                  
                 )}
+                <p className="text-gray-400">{friendDetails?.bio}</p>
+                <p className="text-gray-400">Preferred: {friendDetails?.email}</p>
               </div>
             </div>
           )}
           <div className="flex flex-col gap-4 mt-4">
-            <button className="btn btn-primary">Contact Friend</button>
-            <button className="btn btn-primary">Contact Friend</button>
-            <button className="btn btn-primary">Contact Friend</button>
+            <button className="btn"><RiNotificationSnoozeLine /> Snooze 2 weeks</button>
+            <button className="btn "><FaArchive /> Archive</button>
+            <button className="btn text-red-500"><MdDelete /> Delete</button>
           </div>
         </div>
         <div className="col-span-8 ">
           <div className="flex gap-4">
             <div className="flex flex-col items-center py-10 w-full shadow-md">
-              <span className="text-[#244D3F] text-2xl font-semibold">62</span>
+              <span className="text-[#244D3F] text-2xl font-semibold">{friendDetails?.days_since_contact}</span>
               <p className="text-gray-400">Days Since Contact</p>
             </div>
             <div className="flex flex-col items-center py-10 w-full shadow-md">
-              <span className="text-[#244D3F] text-2xl font-semibold">62</span>
+              <span className="text-[#244D3F] text-2xl font-semibold">{friendDetails?.goal}</span>
               <p className="text-gray-400">Goal (Days)</p>
             </div>
             <div className="flex flex-col items-center py-10 w-full shadow-md">
@@ -88,8 +94,8 @@ const FriendsPageDetails = () => {
           </div>
           <div className="flex flex-col py-6 w-full shadow-md px-4 mt-6">
             <div className="flex justify-between items-center">
-              <h1>Relationship Goal Edit</h1>
-              <button className="btn ml-4">Edit</button>
+              <h1 className="text-[#244D3F]">Relationship Goal Edit</h1>
+              <button className="btn ml-4 bg-[#f8fafc]">Edit</button>
             </div>
             <p>
               Connect every <span className="font-bold">30 days</span>
@@ -98,15 +104,15 @@ const FriendsPageDetails = () => {
           <div className="flex flex-col py-6 w-full shadow-md px-4 mt-6">
             <h1 className="text-[20px] font-medium">Quick Check-In</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="text-center py-6 mt-4 rounded-md cursor-pointer flex justify-center items-center shadow-md">
+              <div className="text-center py-6 mt-4 rounded-md cursor-pointer flex flex-col justify-center items-center gap-4 shadow-md bg-[#f8fafc]">
                 <Image src={callIcon} alt="message" width={30} height={30} />
                 <span className="ml-2">Call</span>
               </div>
-              <div className="text-center py-6 mt-4 rounded-md cursor-pointer flex justify-center items-center shadow-md">
+              <div className="text-center py-6 mt-4 rounded-md cursor-pointer flex flex-col justify-center items-center gap-4 shadow-md bg-[#f8fafc]">
                 <Image src={textIcon} alt="message" width={30} height={30} />
                 <span className="ml-2">Text</span>
               </div>
-              <div className="text-center py-6 mt-4 rounded-md cursor-pointer flex justify-center items-center shadow-md bg-[#ffffff]">
+              <div className="text-center py-6 mt-4 rounded-md cursor-pointer flex flex-col justify-center items-center gap-4 shadow-md bg-[#f8fafc]">
                 <Image src={videoIcon} alt="message" width={30} height={30} />
                 <span className="ml-2">Video Call</span>
               </div>
