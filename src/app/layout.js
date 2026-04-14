@@ -1,7 +1,9 @@
+'use Client';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/Header";
-
+import AuthProvider from "@/component/ContextProvider/AuthProvider";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,20 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col ">
         <Header />
-        {children}
+        <AuthProvider>{children}</AuthProvider>
+        <ToastContainer
+          position="top-center"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Zoom}
+        />
       </body>
     </html>
   );
