@@ -49,7 +49,7 @@ const Footer = () => {
             </a>
           </div>
         </nav>
-        <hr className="md:w-[72%] text-gray-500" />
+        <hr className="md:w-[72%] lg:w-[78%] text-gray-500" />
         <div className="flex flex-col lg:flex-row justify-between md:w-full lg:px-50">
           <div>
             <p className="font-semibold">

@@ -7,7 +7,7 @@ export default function Home() {
     <div className="container mx-auto pt-20">
       <main className="">
         <Banner></Banner>
-        <Suspense fallback={<div className="flex justify-center items-center">Loading...</div>}>
+        <Suspense fallback={<div className="flex justify-center">Loading...</div>}>
           <HomePage></HomePage>
         </Suspense>
         
