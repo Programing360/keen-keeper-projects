@@ -17,13 +17,13 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-base-100">
+    <div className="bg-base-100 border-b-2 border-gray-200 fixed top-0 left-0 right-0 z-50  shadow-sm shadow-purple-400 ">
       <div className="navbar container mx-auto">
         <div className="navbar-start ">
           <Image src={logoIcon} alt="Logo" width={130} height={50} />
         </div>
         <div className="navbar-center hidden lg:flex "></div>
-        <div className="dropdown navbar-end">
+        <div className="dropdown navbar-end md:hidden">
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}

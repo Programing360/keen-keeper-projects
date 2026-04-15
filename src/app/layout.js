@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/component/Header";
 import AuthProvider from "@/component/ContextProvider/AuthProvider";
 import { ToastContainer, Zoom } from "react-toastify";
+import Footer from "@/component/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col ">
         <Header />
         <AuthProvider>{children}</AuthProvider>
+        <Footer></Footer>
         <ToastContainer
           position="top-center"
           autoClose={1000}

@@ -1,5 +1,4 @@
 import Banner from "@/component/Banner";
-import Footer from "@/component/Footer";
 import HomePage from "@/component/HomePage";
 import { Suspense } from "react";
 
@@ -11,7 +10,7 @@ export default function Home() {
         <Suspense fallback={<div className="flex justify-center items-center">Loading...</div>}>
           <HomePage></HomePage>
         </Suspense>
-        <Footer></Footer>
+        
       </main>
     </div>
   );
