@@ -5,7 +5,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 const TimeLinePage = () => {
-  const { selectedFriend, setSelectedFriend } = useContext(AuthContext);
+  const { selectedFriend } = useContext(AuthContext);
   const [originalData, setOriginalData] = useState([]);
   const date = new Date();
   const time = date.toLocaleDateString("en-US", {
@@ -38,13 +38,13 @@ const TimeLinePage = () => {
       <select
         onChange={handleSortData}
         defaultValue="all"
-        className="select select-neutral outline-0"
+        className="select select-neutral outline-0 mt-4"
       >
         <option disabled={true}>Selected</option>
         <option>All</option>
         <option value="call">Call</option>
         <option value="text">Text</option>
-        <option value="video">Video</option>
+        <option value="Video Call">Video</option>
       </select>
       {originalData.length === 0 && (
         <p className="text-gray-500 mt-24 text-center">

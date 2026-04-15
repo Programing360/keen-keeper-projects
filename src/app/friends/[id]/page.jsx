@@ -31,7 +31,7 @@ const FriendsPageDetails = () => {
       actiontype: type,
     };
 
-    if(selectedFriend.some(friend => friend.id === data.id)) {
+    if(selectedFriend.some(friend => friend.actiontype === type && friend.id === data.id)) {
       toast.error("Already added to timeline");
       return;
     }
