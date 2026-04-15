@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 import { FaHome } from "react-icons/fa";
 import { ImStatsDots } from "react-icons/im";
 import { IoTimeOutline } from "react-icons/io5";
-
+import logoIcon from '../../public/assets/logo.png';
+import Image from "next/image";
 const Header = () => {
 
     const pathName = usePathname();
@@ -41,7 +42,7 @@ const Header = () => {
               </svg>
             </div>
           </div>
-          <a className="text-xl text-black">KeenKeeper</a>
+          <Image src={logoIcon} alt="Logo" width={130} height={50} />
         </div>
         <div className="navbar-center hidden lg:flex">
         </div>

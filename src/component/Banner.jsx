@@ -11,7 +11,7 @@ const Banner = () => {
       <button className=" bg-[#244D3F] text-white py-2 px-4 rounded-md hover:bg-[#1a3d2d]">
         Add a Friend
       </button>
-      <div className="flex justify-center items-center mx-auto gap-4 mt-15 w-6xl ">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-center items-center mx-auto gap-4 mt-15 lg:w-6xl ">
         <div className="flex flex-col items-center py-6 w-full shadow-md" >
             <span className="text-3xl font-bold">10</span>
             <p className="text-[#64748B]">Total Friends</p>

@@ -40,8 +40,8 @@ const FriendsPageDetails = () => {
   };
   return (
     <div>
-      <div className="grid grid-cols-12 container mx-auto gap-6 mt-20">
-        <div className=" col-span-4">
+      <div className="grid md:grid-cols-12 justify-center container mx-auto gap-6 mt-20">
+        <div className="col-span-8 md:col-span-4">
           {friendDetails && (
             <div className="card bg-base-100 shadow-sm">
               <figure className="px-10 pt-10">
@@ -101,7 +101,7 @@ const FriendsPageDetails = () => {
           </div>
         </div>
         <div className="col-span-8 ">
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col items-center py-10 w-full shadow-md">
               <span className="text-[#244D3F] text-2xl font-semibold">
                 {friendDetails?.days_since_contact}

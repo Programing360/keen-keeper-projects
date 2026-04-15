@@ -12,17 +12,19 @@ const TimeLinePage = () => {
     day: "numeric",
   });
 
-  
+
   return (
     <div className="container mx-auto mt-20">
       <h1 className="text-4xl font-bold">Timeline </h1>
-      <select defaultValue="Server location" className="select select-neutral">
+      <select defaultValue="Server location" className="select select-neutral outline-0">
         <option disabled={true}>Server location</option>
         <option>North America</option>
         <option>EU west</option>
         <option>South East Asia</option>
       </select>
-
+        {
+            selectedFriend.length === 0 && <p className="text-gray-500 mt-24 text-center">No activities yet. Add some from friend details page.</p>
+        }
       <div>
         {selectedFriend.map((friend, idx) => (
           <div key={idx} className=" my-6 p-4 shadow-md rounded-2xl flex items-center gap-4">
